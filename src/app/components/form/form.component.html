@@ -1,0 +1,15 @@
+<form class="form">
+  <mat-form-field class="form__field" appearance="fill">
+    <mat-label for="form">{{ label }}</mat-label>
+    <input
+      id="form"
+      matInput
+      type="text"
+      [placeholder]="placeholder"
+      [formControl]="form"
+    >
+    <!-- {{ form.value }} -->
+  </mat-form-field>
+  <app-button text="Search" class="form__button" (btnClick)="getResults()"></app-button>
+</form>
+

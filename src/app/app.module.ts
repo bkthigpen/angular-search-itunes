@@ -1,16 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from "@angular/material/button";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule  } from '@angular/material/input';
+import { MatGridListModule  } from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonComponent } from './components/button/button.component';
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ButtonComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
