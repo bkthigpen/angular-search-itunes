@@ -54,6 +54,7 @@ export class FormComponent implements OnInit {
           console.error('Request failed with error', error)
           // this.errorMessage = error;
           // this.loading = false;
+          this.clearInput();
         })
   }
 
