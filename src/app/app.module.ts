@@ -7,6 +7,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule  } from '@angular/material/input';
 import { MatGridListModule  } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './components/button/button.component';
@@ -27,6 +28,7 @@ import { FormComponent } from './components/form/form.component';
     MatFormFieldModule,
     MatGridListModule,
     MatInputModule,
+    MatTableModule,
     ReactiveFormsModule
   ],
   providers: [],

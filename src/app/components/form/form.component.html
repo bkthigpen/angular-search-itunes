@@ -13,3 +13,14 @@
   <app-button text="Search" class="form__button" (btnClick)="getResults()"></app-button>
 </form>
 
+<!-- ngIf on form.value to search on each keystroke -->
+<!-- Using this current implementation based on acceptance criteria -->
+<mat-table *ngIf="results" #table [dataSource]="dataSource" class="mat-elevation-z1">
+  <ng-container matColumnDef="{{ column.id }}" *ngFor="let column of columnNames">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> {{ column.value || 'N/A'}}</mat-header-cell>
+    <mat-cell *matCellDef="let element">{{ element[column.id] }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
