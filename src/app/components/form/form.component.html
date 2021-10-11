@@ -1,26 +1,27 @@
 <form class="form">
   <mat-form-field class="form__field" appearance="fill">
     <mat-label for="form">{{ label }}</mat-label>
+    <!-- Componentize this-->
     <input
       id="form"
+      class="form__input"
       matInput
       type="text"
       [placeholder]="placeholder"
       [formControl]="form"
     >
-    <!-- {{ form.value }} -->
   </mat-form-field>
-  <app-button text="Search" (btnClick)="getResults()"></app-button>
+  <app-button class="form__button" text="Search" (btnClick)="getResults()"></app-button>
 </form>
 
 <!-- ngIf on form.value to search on each keystroke -->
 <!-- Using this current implementation based on acceptance criteria -->
-<mat-table *ngIf="results" #table [dataSource]="dataSource" class="mat-elevation-z1">
+<!-- Componentize this for next steps -->
+<mat-table *ngIf="results" #table [dataSource]="dataSource" class="table mat-elevation-z1">
   <ng-container matColumnDef="{{ column.id }}" *ngFor="let column of columnNames">
     <mat-header-cell *matHeaderCellDef mat-sort-header> {{ column.value || 'N/A'}}</mat-header-cell>
     <mat-cell *matCellDef="let element">{{ element[column.id] }}</mat-cell>
   </ng-container>
-
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>

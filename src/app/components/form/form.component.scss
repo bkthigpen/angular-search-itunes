@@ -1,17 +1,17 @@
 .form {
   position: relative;
-  min-width: 300px;
+  display: flex;
+  width: 100%;
+  flex: 0 0 100%;
+  text-align: center;
 
   &__field {
-    display: block;
     width: 100%;
+    margin-right: 10px;
   }
 
-  @media screen and (min-width: 768px) {
-    min-width: 500px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    min-width: 800px;
+  &__button {
+    display: flex;
+    padding-bottom: 1.34375em; // the measurement of the input padding-bottom
   }
 }

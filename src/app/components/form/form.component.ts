@@ -9,6 +9,9 @@ import { ConfigService } from 'src/app/config/config.service';
   styleUrls: ['./form.component.scss']
 })
 
+// this is our smart component...for now
+// now to read up on componentizing in Angular
+// when I have free time
 export class FormComponent implements OnInit {
   @Input() form = new FormControl();
   @Input() label: string = 'Label';
@@ -33,27 +36,20 @@ export class FormComponent implements OnInit {
   }
 
   getResults(): void {
-    // this.loading = true;
-    // this.errorMessage = '';
     this.configService.getResponse(this.form.value)
       .subscribe(
-        (response) => {                           //next() callback
+        (response) => {
           console.log('response received', response)
-          // this.results = response.results;
-          // this.dataSource = response.results;
-
           // only using this flag to render the table
-          // can do without it if we went with the keystroke route
+          // can do without it if we go with the keystroke route
           this.results = true;
           this.createTable(response.results);
 
           // clear input after each successful call
           this.clearInput();
         },
-        (error) => {                              //error() callback
+        (error) => {
           console.error('Request failed with error', error)
-          // this.errorMessage = error;
-          // this.loading = false;
           this.clearInput();
         })
   }

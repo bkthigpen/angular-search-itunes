@@ -1,4 +1,14 @@
-# AngularSearchItunes
+# Angular Search iTunes
+
+A quick little project to learn the basics of modern Angular.
+
+TODOS:
+
+[] Componentize Table
+[] Componetize Form
+[] Componetize Input
+[] Look At State Implementation
+[] Start building Interfaces for data
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
 
