@@ -1,16 +1,16 @@
 # Angular Search iTunes
 
-A quick little project to learn the basics of modern Angular.
-
-TODOS:
-
-[] Componentize Table
-[] Componetize Form
-[] Componetize Input
-[] Look At State Implementation
-[] Start building Interfaces for data
+A quick little project to learn the basics of modern Angular. I haven't touched it since 2016, I think. And even then, it was more in a demo capacity There's still quite a few things left to do before it's 100% ready, such as componentizing it a bit more and look at state management, but for a quick little attempt, it gets the job done.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
+
+## TODOS:
+
+- [] Componentize Table
+- [] Componetize Form
+- [] Componetize Input
+- [] Look At State Implementation if it makes sense
+- [] Start building Interfaces for data
 
 ## Development server
 
