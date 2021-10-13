@@ -7,8 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## TODOS:
 
 - [ ] Componentize Table
-- [ ] Componetize Form
-- [ ] Componetize Input
+- [ ] Componentize Form
+- [ ] Componentize Input
 - [ ] Look At State Implementation if it makes sense
 - [ ] Start building Interfaces for data
 

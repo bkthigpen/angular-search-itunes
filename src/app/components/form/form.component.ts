@@ -36,10 +36,14 @@ export class FormComponent implements OnInit {
   }
 
   getResults(): void {
+    // dont't execute if we have no value
+    if (!this.form.value) {
+      return;
+    }
+
     this.configService.getResponse(this.form.value)
       .subscribe(
         (response) => {
-          console.log('response received', response)
           // only using this flag to render the table
           // can do without it if we go with the keystroke route
           this.results = true;
@@ -49,7 +53,7 @@ export class FormComponent implements OnInit {
           this.clearInput();
         },
         (error) => {
-          console.error('Request failed with error', error)
+          console.error('Request failed with error', error);
           this.clearInput();
         })
   }
